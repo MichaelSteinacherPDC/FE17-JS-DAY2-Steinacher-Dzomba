@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ranNum = Math.random() * 4 ;
+        function randomFood(number){
+            var foods = ["pizza", "hamburger", "ice cream", "chocolate"];
+            console.log(Math.floor(number));
+            return foods[Math.floor(number)];
+        }
+
+        console.log(randomFood(ranNum));
+    </script>
+</body>
+</html>
