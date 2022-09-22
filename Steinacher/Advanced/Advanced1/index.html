@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let minutes = 200;
+        let hours = 0;
+        
+        function timeConvert(minutes){
+            hours = Math.floor(minutes/60);
+            minutes = minutes- hours * 60;
+            start_minutes = hours * 60 + minutes; 
+            let time = [start_minutes, hours , minutes];
+            return time;
+        }
+
+        console.log(timeConvert(minutes)[0] + " minutes = " + timeConvert(minutes)[1] + " hours and " + timeConvert(minutes)[2] + " minutes");
+    </script>
+</body>
+</html>
