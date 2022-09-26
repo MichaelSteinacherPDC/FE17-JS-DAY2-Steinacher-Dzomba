@@ -5,7 +5,6 @@ function atmMachine(money) {
     let tenEur = 0;
     money = document.getElementById('money').value;
 
-
     if (money >= 100) {
         hundredEur = atmAlgorithm(money, 100)[0];
         money = atmAlgorithm(money, 100)[1];
@@ -27,11 +26,12 @@ function atmMachine(money) {
     document.getElementById("fiftyEuro").innerHTML = fiftyEur;
     document.getElementById("twentyEuro").innerHTML = twentyEur;
     document.getElementById("tenEuro").innerHTML = tenEur;
-
 }
+
 
 function atmAlgorithm(money, worth) {
     let billNum = 0;
+
     // get how many bills will be output
     billNum = Math.floor(money / worth);
 
@@ -40,11 +40,10 @@ function atmAlgorithm(money, worth) {
 
     // return array for the 2 different values
     var moneyArray = [billNum, money];
-    console.log(moneyArray);
     return moneyArray;
 }
 
 
-const btn1 = document.getElementById('btn1');
+const calcButton = document.getElementById('calcButton');
 //start function with button
-btn1.addEventListener('click', atmMachine);
+calcButton.addEventListener('click', atmMachine);
